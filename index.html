@@ -1,43 +1,159 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Project-template by PixelantQC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <title>Pixelant QC Template by PixelantQC</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Project-template</h1>
-        <p>This is the template for further projects</p>
+    <header>
+      <div class="inner">
+        <h1>Pixelant QC Template</h1>
+        <h2>Nightwatch and Galen environment for running tests Locally(SeleniumServer) or on Browserstack or Saucelabs</h2>
+        <a href="https://github.com/PixelantQC/project-template" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-        <p class="view"><a href="https://github.com/PixelantQC/project-template">View the Project on GitHub <small>PixelantQC/project-template</small></a></p>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h1>
 
+<p>This is a template project which helps you to automate and check your site's <strong>layout</strong> with a help of <a href="http://galenframework.com/">Galen Faramework</a>.
+And site's <strong>functionality</strong> using <a href="http://nightwatchjs.org/">Nightwatch.js</a>.
+This project also contains configuration for selenium server to run tests locally. It also includes cloud based configuration to run your tests on web services like: <a href="https://saucelabs.com/">SauceLabs</a> and <a href="http://browserstack.com/">Browserstack</a>.</p>
 
-        <ul>
-          <li><a href="https://github.com/PixelantQC/project-template/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/PixelantQC/project-template/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/PixelantQC/project-template">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p><em>Hello</em></p>
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h1>
 
-<p>This is template project. Copy it and create the functional(Nightwatch.js) and layout(GalenFramework) tests for your specific project.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/PixelantQC">PixelantQC</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+<p>To run these sample tests, you need to <em>setup</em> your environment <em>first</em>:</p>
+
+<h2>
+<a id="node-and-npm" class="anchor" href="#node-and-npm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Node and NPM</h2>
+
+<p><a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
+
+<h2>
+<a id="selenium-server" class="anchor" href="#selenium-server" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selenium server</h2>
+
+<p>You need to fire up selenium server(standalone or chrome or safari for firing up your locally installed specific browser) to run your Nightwatch test <em>locally</em>.</p>
+
+<p><strong>Download:</strong> <a href="http://www.seleniumhq.org/download/">http://www.seleniumhq.org/download/</a></p>
+
+<h2>
+<a id="java" class="anchor" href="#java" aria-hidden="true"><span class="octicon octicon-link"></span></a>Java</h2>
+
+<p>You need <em>java</em>(JDK and JRE) to run selenium server:</p>
+
+<p><strong>Download:</strong> <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a></p>
+
+<h2>
+<a id="nightwatch-and-galen" class="anchor" href="#nightwatch-and-galen" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nightwatch and Galen</h2>
+
+<p><em>Two simple commands to install testing frameworks globally(-g flag) after you've installed npm:</em></p>
+
+<p><code>$ sudo npm install -g galenframework-cli</code></p>
+
+<p><code>$ sudo npm install -g nightwatch</code></p>
+
+<h2>
+<a id="saucelabs-and-browserstack-environment-variables" class="anchor" href="#saucelabs-and-browserstack-environment-variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>SauceLabs and Browserstack environment variables</h2>
+
+<p>I set my <strong>username</strong> and <strong>access_key</strong> for these services as environment variables. I need these for running <strong>Nightwatch</strong> tests. So my configuration needs your to export this variables in .bash_profile like this:</p>
+
+<p><code>$ sudo nano ~/.bash_profile</code></p>
+
+<p>And paste there your new variables:</p>
+
+<pre><code>export BROWSERSTACK_USER="_your_browserstack_user_"
+export BROWSERSTACK_KEY="_your_browserstack_access_key_"
+export SAUCE_USER="_your_saucelabs_user_"
+export SAUCE_KEY="_your_saucelabs_access_key_"
+</code></pre>
+
+<h2>
+<a id="saucelabs-and-browserstack-secrettest" class="anchor" href="#saucelabs-and-browserstack-secrettest" aria-hidden="true"><span class="octicon octicon-link"></span></a>SauceLabs and Browserstack secret.test</h2>
+
+<p>To run <strong>Galen</strong> tests you need to create <code>secret.test</code> file in Galen/ root folder(same folder for Galen configuration files).
+You need to set there <code>browserstack_url</code> and <code>saucelabs_url</code>. It should look like this:</p>
+
+<p><em># your secret.test</em></p>
+
+<pre><code>@@ set
+  browserstack_url http://browserstack_username:access_key@hub.browserstack.com/wd/hub
+  saucelabs_url http://saucelabs_username:access_key@ondemand.saucelabs.com:80/wd/hub
+</code></pre>
+
+<h2>
+<a id="install-html-reports-npm-module-for-nightwatchjs" class="anchor" href="#install-html-reports-npm-module-for-nightwatchjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install html-reports npm module for Nightwatch.js</h2>
+
+<p><code>$ cd Nightwatch/</code></p>
+
+<p><code>$ npm install</code></p>
+
+<h1>
+<a id="running-your-tests" class="anchor" href="#running-your-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running your tests</h1>
+
+<p>To run sample tests you should look into both <em>package.json</em> in Nightwatch and Galen folders. There are many predefined scripts for easily running your tests in any environment you want: Saucelabs, Browserstack or just locally. Also in package.json you could see my scripts for exporting Nightwatch and Galen test reports to my Dropbox Desktop folder on my Mac. You can freely redefine them for you needs or write new ones.</p>
+
+<p>For example to run all Nightwatch desktop tests on Saucelabs:</p>
+
+<pre><code>$ cd Nightwatch/
+$ npm run sl-desktop
+</code></pre>
+
+<p>Or to run <em>home-page.js</em> test locally(don't forget to fire up your local <strong>selenium server</strong>). <em><strong>Note</strong></em>: to run <strong>Galen</strong> tests - you <strong>don't need</strong> to run your selenium-server instance:</p>
+
+<pre><code>$ cd Nightwatch/
+$ npm run home
+</code></pre>
+
+<p>Same logic works for Galen Framework. To run all your browserstack mobile tests silently(-s flag means - no npm errors in terminal are shown):</p>
+
+<pre><code>$ cd Galen/
+$ npm run bs-mobile
+</code></pre>
+
+<h1>
+<a id="reports" class="anchor" href="#reports" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reports</h1>
+
+<p>All the html reports of completed tests you can open in your prefered browser. Local reports located in <code>Nightwatch/reports/</code> and <code>Galen/reports/</code> folders. All Browserstack and Saucelabs reports situated in <code>Nightwatch/browserstack_reports/</code> and <code>Galen/saucelabs_reports/</code> folders.</p>
+
+<h1>
+<a id="saucelabsnightwatch-specialties" class="anchor" href="#saucelabsnightwatch-specialties" aria-hidden="true"><span class="octicon octicon-link"></span></a>SauceLabs/Nightwatch specialties</h1>
+
+<p>In <a href="https://github.com/PixelantQC/project-template/tree/master/Nightwatch/scripts">Nightwatch/scripts</a> folder there is a script called <a href="https://github.com/PixelantQC/project-template/blob/master/Nightwatch/scripts/report.js">report.js</a>. This script(if combined with <code>afterEach</code> method which defined in <em>home-page.js</em>) defines the status of the job which ran in SauceLabs dashboard. I mean it sets 'passed' or 'failed' status of finished test instead of 'completed'. This is quite helpful when analysing your testing results.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/PixelantQC/project-template/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/PixelantQC/project-template/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/PixelantQC/project-template"></a> is maintained by <a href="https://github.com/PixelantQC">PixelantQC</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+
+  
   </body>
 </html>
