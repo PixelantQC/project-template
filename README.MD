@@ -5,7 +5,7 @@ This project also contains configuration for selenium server to run tests locall
 
 
 # Installation
-To run these sample tests, you need to _setup_ your environment _first_:
+To run these tests, you need to _setup_ your environment _first_:
 
 
 ## Node and NPM
@@ -33,7 +33,7 @@ _Two simple commands to install testing frameworks globally(-g flag) after you'v
 
 
 ## SauceLabs and Browserstack environment variables
-I set my **username** and **access_key** for these services as environment variables. I need these for running **Nightwatch** tests. So my configuration needs your to export this variables in .bash_profile like this:
+I set my **username** and **access_key** for these services as environment variables. I need these for running **Nightwatch** tests. So my configuration needs you to export this variables in .bash_profile like this:
 
 `$ sudo nano ~/.bash_profile`
 
