@@ -4,12 +4,12 @@
 @@ table devices
     | deviceName | tags      | size      |
     #| Mobile     | mobile    | 360x640   |
-    | Tablet     | tablet    | 768x1024  |
-    #| Desktop    | desktop   | 1280x1024 |
+    #| Tablet     | tablet    | 768x1024  |
+    | Desktop    | desktop   | 1280x1024 |
 
 @@ parameterized using devices
-@@ groups default
-Home Page on ${deviceName}
+@@ groups header
+Header on Home Page on ${deviceName}
     ${base_url} ${size}
         #run scripts/login-template.js
-        check specs/home-page.gspec --include ${tags}
+        check specs/Home/header.gspec --include ${tags}

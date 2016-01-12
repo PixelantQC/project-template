@@ -1,7 +1,7 @@
 @@ import secret.test
 
 @@ set
-  name "Testing home page layout of Project"
+  name "Testing Home Page Layout of Project"
   base_url http://samples.galenframework.com/tutorial1/tutorial1.html
   browser_size "1280x1024"
 
@@ -34,18 +34,18 @@
 Home Page on ${deviceName}
     selenium grid ${saucelabs_url} --page ${base_url} ${gridArgs}
         #run scripts/login-template.js
-        check specs/home-page.gspec
+        check specs/Home/header.gspec
 
 @@ parameterized using devices-tablet
 @@ groups home-tablet
 Home Page on ${deviceName}
     selenium grid ${saucelabs_url} --page ${base_url} ${gridArgs}
         #run scripts/login-template.js
-        check specs/home-page.gspec
+        check specs/Home/header.gspec
 
 @@ parameterized using devices-mobile
 @@ groups home-mobile
 Home Page on ${deviceName}
     selenium grid ${saucelabs_url} --page ${base_url} ${gridArgs}
         #run scripts/login-template.js
-        check specs/home-page.gspec
+        check specs/Home/header.gspec

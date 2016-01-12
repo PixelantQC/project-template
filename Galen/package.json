@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "all": "galen test configuration.test --htmlreport reports",
-    "default": "galen test configuration.test --htmlreport reports --groups default",
+    "home-header": "galen test configuration.test --htmlreport reports --groups header",
     "bs-desktop": "galen test browserstack-configuration.test --htmlreport browserstack_reports --groups home-desktop --parallel-tests 2",
     "bs-tablet": "galen test browserstack-configuration.test --htmlreport browserstack_reports --groups home-tablet --parallel-tests 2",
     "bs-mobile": "galen test browserstack-configuration.test --htmlreport browserstack_reports --groups home-mobile --parallel-tests 2",
